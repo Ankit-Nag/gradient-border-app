@@ -63,6 +63,12 @@ hr {
     border: 1px groove var(--light-grey);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .mainContainer {
     margin: 2rem auto;
     text-align: center;
@@ -78,7 +84,9 @@ hr {
 }
 
 .input-box {
+    margin: auto 1rem;
     padding: 0.5rem;
+    padding-left: 0.5rem;
     border-radius: 0.5rem;
     border: none;
     font-family: 'Source Sans Pro', sans-serif;
@@ -89,6 +97,8 @@ hr {
     box-shadow: 1px 1px 5px 2px var(--almost-black);
     transition: all 250ms ease-in-out;
 }
+
+
 
 .input-box:focus {
     caret-color: var(--light-grey);
@@ -177,48 +187,28 @@ hr {
 }
 
 .float-left{
-    display: inline-flex;
-    float: left;
+    display: flex;
+    justify-content: left;
     padding: 2rem auto;
+    padding-left: 1rem;
 }
 
-.slidecontainer {
-    width: 50vw; /* Width of the outside container */
-  }
-  
-  /* The slider itself */
-  .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    border-radius: 5px;  
-    width: 25vw; /* Full-width */
-    height: 15px; /* Specified height */
-    background: var(--light-grey); /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.75; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-  }
-  
-  /* Mouse-over effects */
-  .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-  }
-  
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    border-radius: 2rem;  
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: var(--green); /* Green background */
-    cursor: pointer; /* Cursor on hover */
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: var(--green); /* Green background */
-    cursor: pointer; /* Cursor on hover */
-  }
+.flex{
+    display: flex;
+}
+
+.label{
+    display: inline;
+}
+
+.float-right{
+    position: relative;
+    float: right;
+}
+
+.visualRep{
+    min-width: 20vw;
+    min-height: 20vw;
+    max-width: 25vw;
+    background-color: var(--dark-red);
+}
